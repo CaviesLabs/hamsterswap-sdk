@@ -56,22 +56,4 @@ export class TransactionProvider {
     const txid = await this.connection.sendRawTransaction(rawTx.serialize())
     return txid
   }
-
-  /**
-   * @dev Get transaction.
-   * @param {TransactionSignature} tx
-   * @returns
-   */
-  // public async getTransaction(tx: TransactionSignature) {
-  //   const transaction = await this.connection.getParsedTransaction(tx, {
-  //     commitment: "confirmed",
-  //   });
-  //   const eventParser = new EventParser(
-  //     this.program.programId,
-  //     new BorshCoder(this.program.idl)
-  //   );
-
-  //   const [event] = eventParser.parseLogs(transaction.meta.logMessages);
-  //   return JSON.stringify(event);
-  // }
 }

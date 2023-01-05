@@ -4,7 +4,6 @@
 import { Connection, PublicKey, TransactionInstruction } from '@solana/web3.js'
 import * as anchor from '@project-serum/anchor'
 import { Program } from '@project-serum/anchor'
-import { WalletContextState as WalletProvider } from '@solana/wallet-adapter-react'
 import {
   CreateProposalDto,
   SwapItemActionType,
@@ -17,6 +16,7 @@ import {
 import { SwapIdl, IDL } from './swap.idl'
 import { InstructionProvider } from './instruction.provider'
 import { TransactionProvider } from './transaction.provider'
+import { Network, WalletProvider } from '../entities/lib.entity'
 
 export const SOLANA_DEVNET_RPC_ENDPOINT = 'https://api.devnet.solana.com'
 export const SOLANA_MAINNET_RPC_RPC_ENDPOINT =
@@ -54,22 +54,34 @@ export class SwapProgramProvider {
   private transactionProvider: TransactionProvider
 
   /**
+   * @dev Define variable to condition which network the sdk use.
+   * @enum {Network}
+   * @private
+   */
+  private network: Network
+
+  /**
    * @dev Initialize swap program provider.
    */
-  constructor(walletProvider: WalletProvider) {
+  constructor(walletProvider: WalletProvider, network: Network) {
     /**
      * @dev Initilize wallet provider context.
      */
     this.walletProvider = walletProvider
 
     /**
+     * @dev Assign network.
+     */
+    this.network = network
+
+    /**
      * @dev Binding cluster
      */
-    switch (process.env.SOLANA_CLUSTER) {
-      case 'devnet':
+    switch (this.network) {
+      case Network.devnet:
         this.rpcEndpoint = SOLANA_DEVNET_RPC_ENDPOINT
         break
-      case 'mainnet':
+      case Network.mainnet:
         this.rpcEndpoint = SOLANA_MAINNET_RPC_RPC_ENDPOINT
         break
       default:

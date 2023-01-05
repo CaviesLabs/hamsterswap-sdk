@@ -6,7 +6,7 @@ import {
   CreateProposalToServerDto,
   SwapProposalEntity,
 } from '../entities/proposal.entity'
-import { WalletContextState as WalletProvider } from '@solana/wallet-adapter-react'
+import { Network, WalletProvider } from '../entities/lib.entity'
 import { uuid } from 'uuidv4'
 
 export class SwapProgramService {
@@ -16,11 +16,26 @@ export class SwapProgramService {
    */
   private readonly swapProgramProvider: SwapProgramProvider
 
-  constructor(swapProgramProvider: SwapProgramProvider) {
+  /**
+   * @dev Define variable to condition which network the sdk use.
+   * @enum {Network}
+   * @private
+   */
+  private network: Network
+
+  constructor(walletProvider: WalletProvider, network: Network) {
+    /**
+     * @dev Assign network.
+     */
+    this.network = network
+
     /**
      * @dev Import providers.
      */
-    this.swapProgramProvider = swapProgramProvider
+    this.swapProgramProvider = new SwapProgramProvider(
+      walletProvider,
+      this.network
+    )
   }
 
   /**

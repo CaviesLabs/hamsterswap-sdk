@@ -1,6 +1,6 @@
 {
   "name": "@hamsterbox/swap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The library for using services in https://p2p.hamsterbox.xyz/",
   "author": "CaviesLabs <dev@cavies.xyz>",
   "main": "dist/cjs/index.js",
@@ -58,6 +58,7 @@
     "bs58": "^5.0.0",
     "class-validator": "^0.14.0",
     "node-fetch": "^3.3.0",
+    "tweetnacl": "^1.0.3",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
