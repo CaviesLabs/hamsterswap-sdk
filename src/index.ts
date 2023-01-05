@@ -17,7 +17,8 @@ export const useHamsterSwap = () => {
  * The function has its own boundary context.
  * @param options
  */
-export const init = (options: HamsterSwapSdkOptions) => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const initHamsterSwap = (options: HamsterSwapSdkOptions) => {
   /**
    * Initialize new instance
    */
