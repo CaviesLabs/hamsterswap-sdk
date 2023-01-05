@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ant.design">
-    <img width="200" src="https://cavies.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb8137141-b625-433f-9825-8f4bc3591b23%2FUntitled.png?id=bbd2917c-7ea4-4df6-9f70-f5d3c433e44c&table=block&spaceId=4b980001-ecea-4d73-93d4-792b10d7fa1a&width=2000&userId=&cache=v2">
+    <img width="200" src="https://cavies.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5be89023-c777-4dc5-98ac-85d6c495bf94%2FUntitled.png?id=fd02a538-44bd-4a81-9dc9-3e4b854875be&table=block&spaceId=4b980001-ecea-4d73-93d4-792b10d7fa1a&width=2000&userId=&cache=v2">
   </a>
 </p>
 

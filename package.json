@@ -1,6 +1,6 @@
 {
   "name": "@hamsterbox/swap",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "The library for using services in https://p2p.hamsterbox.xyz/",
   "author": "CaviesLabs <dev@cavies.xyz>",
   "main": "dist/cjs/index.js",
@@ -29,17 +29,16 @@
     "dist"
   ],
   "keywords": [
-    "example",
     "typescript",
     "npm",
     "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
     "cjs",
     "esm",
-    "umd"
+    "umd",
+    "sdk",
+    "dapps",
+    "lib",
+    "blockchain"
   ],
   "license": "MIT",
   "homepage": "https://github.com/CaviesLabs/hamsterswap-lib.git",
