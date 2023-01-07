@@ -78,6 +78,7 @@ There is three main flow usage of SDK
     wallet?.publicKey?.toString(),
     signature
   );
+```
 
 # Notes
 
