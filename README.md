@@ -79,10 +79,6 @@ There is three main flow usage of SDK
     signature
   );
 
-```
-
-```
-
 # Notes
 
 This library is still in beta development. Significant changes may happen anytime.
